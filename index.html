@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>BT5</title>
+  </head>
+  <body>
+  
+  <section class="form-custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"></div>
+
+          <form class="row g-3 needs-validation" novalidate>
+
+          <div class="col-md-6">
+            <label for="Full_Name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="Full_Name" placeholder="Enter your full name" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter your full name
+              </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="email">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" placeholder="Enter your email Address" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Type your city name" required>
+            <div class="valid-feedback">
+              Its Perfect!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="zip_code" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="zip_code" placeholder="Type your area zip code" required>
+            <div class="valid-feedback">
+              Its Perfect!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+
+</div>
+</div>
+</section>
+ 
+
+
+    <!-- JS Links -->
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   <script src="js/script.js"></script>
+   <script>
+     // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+       form.addEventListener('submit', function (event) {
+         if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+   </script>
+  </body>
+</html>
